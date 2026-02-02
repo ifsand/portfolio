@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Serena - CV Motif Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- ========================================
+         CV DATA - Modifica qui i tuoi dati
+         ======================================== -->
+    <script id="cv-data" type="application/json">
+    {
+        "profilo": {
+            "nome": "David Serena",
+            "titolo": "Full Stack Software Engineer",
+            "descrizione": "Full Stack developer con <strong>10 anni di esperienza</strong> nello sviluppo software. Ho ricoperto ruoli sia operativi che di team leader, con esperienza in mentorship per figure junior.",
+            "specializzazioni": [
+                "Sviluppo di e-commerce e piattaforme headless",
+                "Integrazione di servizi e middleware ERP",
+                "Sistemi VoIP e applicazioni real-time",
+                "Gestione di big data"
+            ]
+        },
+        "esperienze": [
+            {
+                "azienda": "Adiacent",
+                "luogo": "Empoli (FI)",
+                "ruolo": "Full Stack Engineer",
+                "periodo": "2021 - OGGI",
+                "attivita": [
+                    "App Mobile cross-platform in React Native e Expo",
+                    "Frontend per e-commerce headless (Nuxt.js e Next.js)",
+                    "Middleware per integrazione ERP e piattaforme e-commerce",
+                    "Interazione diretta con i Clienti per requisiti e consulenza",
+                    "Ottimizzazione progetti Composable Commerce",
+                    "Sviluppo PWA su Magento (Hyvä theme)",
+                    "DevOps con Ansible e Terraform",
+                    "App custom con Vue/React, GraphQL, Laravel e Fastify"
+                ]
+            },
+            {
+                "azienda": "Timenet",
+                "luogo": "Empoli (FI)",
+                "ruolo": "Full Stack Engineer",
+                "periodo": "2020 - 2021",
+                "attivita": [
+                    "CRM con ticketing e fatturazione integrata",
+                    "Integrazione gestionale con Zabbix per allarmi"
+                ]
+            },
+            {
+                "azienda": "Advise",
+                "luogo": "Roma",
+                "ruolo": "Full Stack Engineer",
+                "periodo": "2014 - 2019",
+                "attivita": [
+                    "Applicazioni Node.js con Asterisk PBX (WebSockets e REST API)",
+                    "CRM/Softswitch con Asterisk e Kamailio",
+                    "Stack: PHP (Laravel) / Node.js (Express) / Vue",
+                    "Database: Postgres, Couchbase",
+                    "Microservizi in Kubernetes",
+                    "Monitoraggio con SipCapture Homer"
+                ]
+            }
+        ],
+        "competenze": [
+            { "categoria": "Linguaggi", "items": "PHP, JavaScript, TypeScript, C/C++, Rust, Go, Java, Python" },
+            { "categoria": "Frontend", "items": "React, Vue, Next.js, Nuxt.js, Tailwind, Sass/Scss, Astro, GraphQL, Storybook, PWA" },
+            { "categoria": "Backend", "items": "Laravel, Node.js, Fastify, Express" },
+            { "categoria": "Mobile", "items": "React Native, Expo" },
+            { "categoria": "Telecom", "items": "Kamailio, Asterisk, Homer" },
+            { "categoria": "E-commerce", "items": "Magento, BigCommerce, Commercelayer, Shopify, Akeneo" },
+            { "categoria": "Database", "items": "PostgreSQL, MySQL, Redis, MongoDB, Couchbase" },
+            { "categoria": "DevOps", "items": "Kubernetes, Docker, Ansible, Terraform" },
+            { "categoria": "Tools", "items": "GitLab, GitHub, Jira, Confluence" },
+            { "categoria": "Piattaforme", "items": "AWS" }
+        ],
+        "istruzione": [
+            {
+                "istituto": "Università di Pisa",
+                "titolo": "Laurea Specialistica",
+                "periodo": "2008 - 2013",
+                "corso": "Ingegneria Informatica",
+                "dettagli": "Curriculum: Sistemi industriali e sistemi Web",
+                "tesi": "Definizione di strumenti e analisi di gerarchie di memoria per sistemi mono e multiprocessore on-chip"
+            },
+            {
+                "istituto": "Università di Pisa",
+                "titolo": "Laurea Triennale",
+                "periodo": "2003 - 2007",
+                "corso": "Ingegneria Informatica",
+                "tesi": "Il protocollo OSPF e progetto di una rete aziendale"
+            },
+            {
+                "istituto": "MongoDB University",
+                "titolo": "Roma",
+                "periodo": "2015",
+                "corso": "MongoDB Essentials Public Training"
+            }
+        ],
+        "lingue": [
+            { "lingua": "Italiano", "livello": "Madrelingua" },
+            { "lingua": "Inglese", "livello": "B1" }
+        ],
+        "contatti": {
+            "localita": "San Miniato (PI), Italia",
+            "email": "davidserena84@gmail.com",
+            "formspreeId": "YOUR_FORM_ID"
+        }
+    }
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        motif: {
+                            bg: '#b4b4b4',
+                            light: '#d4d4d4',
+                            dark: '#808080',
+                            darker: '#606060',
+                            panel: '#c4c4c4',
+                            text: '#000000',
+                            titlebar: '#6689cc',
+                            titlebarLight: '#89a8e0',
+                            titlebarDark: '#4a6aa0',
+                            highlight: '#e0e0e0',
+                            workspace: '#6689cc',
+                            workspaceActive: '#4a6aa0'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['Courier New', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .motif-raised {
+            border: 2px solid;
+            border-color: #ffffff #808080 #808080 #ffffff;
+            box-shadow: 1px 1px 0 #606060;
+        }
+        .motif-sunken {
+            border: 2px solid;
+            border-color: #808080 #ffffff #ffffff #808080;
+        }
+        .motif-btn:active {
+            border-color: #808080 #ffffff #ffffff #808080;
+        }
+        .window-raised {
+            border: 3px solid;
+            border-color: #ffffff #606060 #606060 #ffffff;
+        }
+        .window-titlebar {
+            background: linear-gradient(180deg, #89a8e0 0%, #6689cc 50%, #5578b8 100%);
+        }
+
+        /* Click animation for icons */
+        .icon-btn {
+            transition: transform 0.05s ease-out;
+        }
+        .icon-btn:active {
+            transform: translate(1px, 1px);
+            border-color: #808080 #ffffff #ffffff #808080 !important;
+            box-shadow: none !important;
+        }
+
+        /* Desktop icon press effect */
+        .desktop-icon:active .icon-btn {
+            transform: translate(1px, 1px);
+            border-color: #808080 #ffffff #ffffff #808080 !important;
+            box-shadow: none !important;
+        }
+        .desktop-icon:active {
+            opacity: 0.9;
+        }
+
+        /* Workspace button press effect */
+        .workspace-btn:active {
+            transform: scale(0.97);
+            border-color: #808080 #ffffff #ffffff #808080 !important;
+        }
+
+        /* Motif Style Scrollbar */
+        ::-webkit-scrollbar {
+            width: 16px;
+            height: 16px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #808080;
+            border: 1px solid #606060;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c4c4c4;
+            border: 2px solid;
+            border-color: #ffffff #808080 #808080 #ffffff;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4d4d4;
+        }
+        ::-webkit-scrollbar-thumb:active {
+            border-color: #808080 #ffffff #ffffff #808080;
+            background: #b4b4b4;
+        }
+        ::-webkit-scrollbar-button {
+            background: #c4c4c4;
+            border: 2px solid;
+            border-color: #ffffff #808080 #808080 #ffffff;
+            display: block;
+            height: 16px;
+            width: 16px;
+        }
+        ::-webkit-scrollbar-button:hover {
+            background: #d4d4d4;
+        }
+        ::-webkit-scrollbar-button:active {
+            border-color: #808080 #ffffff #ffffff #808080;
+            background: #b4b4b4;
+        }
+        ::-webkit-scrollbar-button:vertical:start:decrement {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M4 2L1 5h6z' fill='%23000000'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        ::-webkit-scrollbar-button:vertical:end:increment {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M4 6L1 3h6z' fill='%23000000'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        ::-webkit-scrollbar-button:horizontal:start:decrement {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M2 4l3-3v6z' fill='%23000000'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        ::-webkit-scrollbar-button:horizontal:end:increment {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M6 4l-3-3v6z' fill='%23000000'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        ::-webkit-scrollbar-corner {
+            background: #c4c4c4;
+        }
+
+        /* Firefox scrollbar */
+        * {
+            scrollbar-width: auto;
+            scrollbar-color: #c4c4c4 #808080;
+        }
+
+        /* Print Styles */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            body {
+                background: white !important;
+                font-size: 11pt !important;
+                line-height: 1.4 !important;
+                color: black !important;
+                overflow: visible !important;
+                height: auto !important;
+            }
+
+            /* Hide desktop elements */
+            .desktop-icon,
+            .window-titlebar,
+            [x-show="contextMenu.show"],
+            .fixed.bottom-0 {
+                display: none !important;
+            }
+
+            /* Reset window styles */
+            .window {
+                position: static !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                max-height: none !important;
+                border: none !important;
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                background: white !important;
+                page-break-inside: avoid;
+            }
+
+            .window > div:last-child {
+                max-height: none !important;
+                overflow: visible !important;
+                padding: 0 !important;
+                background: white !important;
+            }
+
+            /* Show all windows */
+            .window[x-show] {
+                display: block !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            /* Section styling */
+            .window h2 {
+                font-size: 14pt !important;
+                color: #2c5282 !important;
+                border-bottom: 2px solid #2c5282 !important;
+                margin-top: 20pt !important;
+                margin-bottom: 10pt !important;
+                padding-bottom: 5pt !important;
+            }
+
+            .window:first-of-type h2 {
+                margin-top: 0 !important;
+            }
+
+            /* Content boxes */
+            .motif-sunken {
+                border: 1px solid #ccc !important;
+                background: #f9f9f9 !important;
+                padding: 8pt !important;
+                margin: 8pt 0 !important;
+            }
+
+            /* Hide form in contacts */
+            form,
+            [x-show="formStatus"],
+            button[type="submit"] {
+                display: none !important;
+            }
+
+            /* Typography */
+            .font-bold {
+                font-weight: bold !important;
+            }
+
+            .text-green-700 {
+                color: #276749 !important;
+            }
+
+            /* Lists */
+            ul {
+                margin-left: 15pt !important;
+            }
+
+            li {
+                margin-bottom: 3pt !important;
+            }
+
+            /* Page setup */
+            @page {
+                margin: 1.5cm;
+                size: A4;
+            }
+
+            /* Ensure content wrapper is visible */
+            .min-h-screen {
+                min-height: auto !important;
+                padding: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body class="font-mono bg-[#5f7f9f] min-h-screen overflow-auto md:overflow-hidden md:h-screen"
+    x-data="{
+        windows: {
+            profilo: { open: true, zIndex: 10 },
+            esperienze: { open: false, zIndex: 1 },
+            competenze: { open: false, zIndex: 1 },
+            istruzione: { open: false, zIndex: 1 },
+            contatti: { open: false, zIndex: 1 }
+        },
+        activeWindow: 'profilo',
+        maxZ: 10,
+        clock: '00:00',
+        dateStr: '01/01/2000',
+        dragging: null,
+        dragOffset: { x: 0, y: 0 },
+        contextMenu: { show: false, x: 0, y: 0 },
+        cv: null,
+
+        openWindow(id) {
+            this.windows[id].open = true;
+            this.bringToFront(id);
+        },
+        closeWindow(id) {
+            this.windows[id].open = false;
+            if (this.activeWindow === id) this.activeWindow = null;
+        },
+        toggleWindow(id) {
+            if (this.windows[id].open) {
+                if (this.activeWindow === id) {
+                    this.closeWindow(id);
+                } else {
+                    this.bringToFront(id);
+                }
+            } else {
+                this.openWindow(id);
+            }
+        },
+        bringToFront(id) {
+            this.maxZ++;
+            this.windows[id].zIndex = this.maxZ;
+            this.activeWindow = id;
+        },
+        startDrag(e, id) {
+            if (window.innerWidth <= 768) return;
+            this.dragging = id;
+            const win = document.getElementById(id);
+            const rect = win.getBoundingClientRect();
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            this.dragOffset = { x: clientX - rect.left, y: clientY - rect.top };
+            this.bringToFront(id);
+        },
+        onDrag(e) {
+            if (!this.dragging || window.innerWidth <= 768) return;
+            const win = document.getElementById(this.dragging);
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            const x = Math.max(0, Math.min(clientX - this.dragOffset.x, window.innerWidth - win.offsetWidth));
+            const y = Math.max(0, Math.min(clientY - this.dragOffset.y, window.innerHeight - win.offsetHeight - 60));
+            win.style.left = x + 'px';
+            win.style.top = y + 'px';
+        },
+        endDrag() { this.dragging = null; },
+        showContextMenu(e) {
+            e.preventDefault();
+            this.contextMenu = {
+                show: true,
+                x: Math.min(e.clientX, window.innerWidth - 180),
+                y: Math.min(e.clientY, window.innerHeight - 250)
+            };
+        },
+        hideContextMenu() {
+            this.contextMenu.show = false;
+        },
+        updateClock() {
+            const now = new Date();
+            this.clock = now.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+            this.dateStr = now.toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
+        },
+        init() {
+            // Carica i dati CV dal JSON embedded
+            this.cv = JSON.parse(document.getElementById('cv-data').textContent);
+            this.updateClock();
+            setInterval(() => this.updateClock(), 1000);
+        }
+    }"
+    x-init="init()"
+    @mousemove.window="onDrag($event)"
+    @mouseup.window="endDrag()"
+    @touchmove.window.passive="onDrag($event)"
+    @touchend.window="endDrag()"
+    @contextmenu.prevent="showContextMenu($event)"
+    @click="hideContextMenu()">
+
+    <template x-if="cv">
+    <div class="min-h-screen md:h-screen relative p-2 md:p-5 pb-28 md:pb-24">
+        <!-- Icons -->
+        <div class="flex flex-wrap">
+            <div class="desktop-icon w-20 md:w-24 text-center m-2 md:m-3 cursor-pointer select-none" @click="openWindow('profilo')">
+                <div class="icon-btn w-14 h-14 md:w-16 md:h-16 bg-motif-light motif-raised mx-auto mb-1 flex items-center justify-center text-3xl md:text-4xl">👤</div>
+                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold">Profilo</div>
+            </div>
+
+            <div class="desktop-icon w-20 md:w-24 text-center m-2 md:m-3 cursor-pointer select-none" @click="openWindow('esperienze')">
+                <div class="icon-btn w-14 h-14 md:w-16 md:h-16 bg-motif-light motif-raised mx-auto mb-1 flex items-center justify-center text-3xl md:text-4xl">💼</div>
+                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold">Esperienze</div>
+            </div>
+
+            <div class="desktop-icon w-20 md:w-24 text-center m-2 md:m-3 cursor-pointer select-none" @click="openWindow('competenze')">
+                <div class="icon-btn w-14 h-14 md:w-16 md:h-16 bg-motif-light motif-raised mx-auto mb-1 flex items-center justify-center text-3xl md:text-4xl">🔧</div>
+                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold">Competenze</div>
+            </div>
+
+            <div class="desktop-icon w-20 md:w-24 text-center m-2 md:m-3 cursor-pointer select-none" @click="openWindow('istruzione')">
+                <div class="icon-btn w-14 h-14 md:w-16 md:h-16 bg-motif-light motif-raised mx-auto mb-1 flex items-center justify-center text-3xl md:text-4xl">🎓</div>
+                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold">Istruzione</div>
+            </div>
+
+            <div class="desktop-icon w-20 md:w-24 text-center m-2 md:m-3 cursor-pointer select-none" @click="openWindow('contatti')">
+                <div class="icon-btn w-14 h-14 md:w-16 md:h-16 bg-motif-light motif-raised mx-auto mb-1 flex items-center justify-center text-3xl md:text-4xl">📧</div>
+                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold">Contatti</div>
+            </div>
+        </div>
+
+        <!-- Windows -->
+        <!-- Profilo Window -->
+        <div id="profilo" class="window fixed md:absolute bg-motif-panel window-raised shadow-lg
+            left-[2%] md:left-[120px] top-[10%] md:top-[60px] w-[96%] md:w-auto md:min-w-[400px] md:max-w-[90vw] max-h-[75vh] md:max-h-[80vh]"
+            x-show="windows.profilo.open"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+            :style="{ zIndex: windows.profilo.zIndex }">
+            <div class="titlebar flex items-center window-titlebar text-black select-none cursor-move border-b border-[#4a6aa0]"
+                @mousedown="startDrag($event, 'profilo')"
+                @touchstart.passive="startDrag($event, 'profilo')">
+                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold">Profilo - <span x-text="cv.profilo.nome"></span></span>
+                <div class="flex gap-1 p-1">
+                    <div class="motif-btn w-6 h-6 md:w-5 md:h-5 bg-motif-light flex items-center justify-center text-black text-xs font-bold cursor-pointer motif-raised" @click.stop="closeWindow('profilo')">✕</div>
+                </div>
+            </div>
+            <div class="p-3 md:p-4 bg-motif-light max-h-[60vh] overflow-y-auto text-sm">
+                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1" x-text="cv.profilo.nome"></h2>
+                <p class="font-bold text-green-700 mb-2" x-text="cv.profilo.titolo"></p>
+                <p class="mb-4" x-html="cv.profilo.descrizione"></p>
+                <div class="bg-white motif-sunken p-2 md:p-3">
+                    <div class="font-bold text-motif-titlebarDark mb-1">Specializzazioni:</div>
+                    <ul class="ml-5 list-disc">
+                        <template x-for="spec in cv.profilo.specializzazioni" :key="spec">
+                            <li x-text="spec"></li>
+                        </template>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Esperienze Window -->
+        <div id="esperienze" class="window fixed md:absolute bg-motif-panel window-raised shadow-lg
+            left-[2%] md:left-[220px] top-[10%] md:top-[80px] w-[96%] md:w-auto md:min-w-[400px] md:max-w-[90vw] max-h-[75vh] md:max-h-[80vh]"
+            x-show="windows.esperienze.open"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+            :style="{ zIndex: windows.esperienze.zIndex }">
+            <div class="titlebar flex items-center window-titlebar text-black select-none cursor-move border-b border-[#4a6aa0]"
+                @mousedown="startDrag($event, 'esperienze')"
+                @touchstart.passive="startDrag($event, 'esperienze')">
+                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold">Esperienze Lavorative</span>
+                <div class="flex gap-1 p-1">
+                    <div class="motif-btn w-6 h-6 md:w-5 md:h-5 bg-motif-light flex items-center justify-center text-black text-xs font-bold cursor-pointer motif-raised" @click.stop="closeWindow('esperienze')">✕</div>
+                </div>
+            </div>
+            <div class="p-3 md:p-4 bg-motif-light max-h-[60vh] overflow-y-auto text-sm">
+                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1">Esperienze Lavorative</h2>
+
+                <template x-for="(exp, index) in cv.esperienze" :key="index">
+                    <div class="bg-white motif-sunken p-2 md:p-3 my-2">
+                        <div class="font-bold text-motif-titlebarDark">
+                            <span x-text="exp.azienda"></span>, <span x-text="exp.luogo"></span> - <span x-text="exp.ruolo"></span>
+                        </div>
+                        <div class="text-motif-dark italic text-xs" x-text="exp.periodo"></div>
+                        <ul class="ml-5 list-disc mt-2">
+                            <template x-for="(att, i) in exp.attivita" :key="i">
+                                <li x-text="att"></li>
+                            </template>
+                        </ul>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <!-- Competenze Window -->
+        <div id="competenze" class="window fixed md:absolute bg-motif-panel window-raised shadow-lg
+            left-[2%] md:left-[320px] top-[10%] md:top-[100px] w-[96%] md:w-auto md:min-w-[400px] md:max-w-[90vw] max-h-[75vh] md:max-h-[80vh]"
+            x-show="windows.competenze.open"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+            :style="{ zIndex: windows.competenze.zIndex }">
+            <div class="titlebar flex items-center window-titlebar text-black select-none cursor-move border-b border-[#4a6aa0]"
+                @mousedown="startDrag($event, 'competenze')"
+                @touchstart.passive="startDrag($event, 'competenze')">
+                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold">Competenze Tecniche</span>
+                <div class="flex gap-1 p-1">
+                    <div class="motif-btn w-6 h-6 md:w-5 md:h-5 bg-motif-light flex items-center justify-center text-black text-xs font-bold cursor-pointer motif-raised" @click.stop="closeWindow('competenze')">✕</div>
+                </div>
+            </div>
+            <div class="p-3 md:p-4 bg-motif-light max-h-[60vh] overflow-y-auto text-sm">
+                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1">Competenze Tecniche</h2>
+
+                <template x-for="(comp, index) in cv.competenze" :key="index">
+                    <div class="bg-white motif-sunken p-2 my-2">
+                        <div class="font-bold text-motif-titlebarDark" x-text="comp.categoria"></div>
+                        <span x-text="comp.items"></span>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <!-- Istruzione Window -->
+        <div id="istruzione" class="window fixed md:absolute bg-motif-panel window-raised shadow-lg
+            left-[2%] md:left-[420px] top-[10%] md:top-[120px] w-[96%] md:w-auto md:min-w-[400px] md:max-w-[90vw] max-h-[75vh] md:max-h-[80vh]"
+            x-show="windows.istruzione.open"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+            :style="{ zIndex: windows.istruzione.zIndex }">
+            <div class="titlebar flex items-center window-titlebar text-black select-none cursor-move border-b border-[#4a6aa0]"
+                @mousedown="startDrag($event, 'istruzione')"
+                @touchstart.passive="startDrag($event, 'istruzione')">
+                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold">Istruzione e Formazione</span>
+                <div class="flex gap-1 p-1">
+                    <div class="motif-btn w-6 h-6 md:w-5 md:h-5 bg-motif-light flex items-center justify-center text-black text-xs font-bold cursor-pointer motif-raised" @click.stop="closeWindow('istruzione')">✕</div>
+                </div>
+            </div>
+            <div class="p-3 md:p-4 bg-motif-light max-h-[60vh] overflow-y-auto text-sm">
+                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1">Istruzione e Formazione</h2>
+
+                <template x-for="(edu, index) in cv.istruzione" :key="index">
+                    <div class="bg-white motif-sunken p-2 md:p-3 my-2">
+                        <div class="font-bold text-motif-titlebarDark">
+                            <span x-text="edu.istituto"></span> - <span x-text="edu.titolo"></span>
+                        </div>
+                        <div class="text-motif-dark italic text-xs" x-text="edu.periodo"></div>
+                        <p class="mt-2"><strong x-text="edu.corso"></strong></p>
+                        <p class="mt-1" x-show="edu.dettagli" x-text="edu.dettagli"></p>
+                        <p class="mt-1 text-xs italic" x-show="edu.tesi">
+                            Tesi: <span x-text="edu.tesi"></span>
+                        </p>
+                    </div>
+                </template>
+
+                <h3 class="text-motif-titlebarDark font-bold mt-5 mb-2">Lingue</h3>
+                <div class="bg-white motif-sunken p-2">
+                    <template x-for="(lang, index) in cv.lingue" :key="index">
+                        <div>
+                            <strong x-text="lang.lingua + ':'"></strong> <span x-text="lang.livello"></span>
+                            <br x-show="index < cv.lingue.length - 1">
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contatti Window -->
+        <div id="contatti" class="window fixed md:absolute bg-motif-panel window-raised shadow-lg
+            left-[2%] md:left-[520px] top-[10%] md:top-[140px] w-[96%] md:w-auto md:min-w-[400px] md:max-w-[90vw] max-h-[75vh] md:max-h-[80vh]"
+            x-show="windows.contatti.open"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+            :style="{ zIndex: windows.contatti.zIndex }">
+            <div class="titlebar flex items-center window-titlebar text-black select-none cursor-move border-b border-[#4a6aa0]"
+                @mousedown="startDrag($event, 'contatti')"
+                @touchstart.passive="startDrag($event, 'contatti')">
+                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold">Informazioni di Contatto</span>
+                <div class="flex gap-1 p-1">
+                    <div class="motif-btn w-6 h-6 md:w-5 md:h-5 bg-motif-light flex items-center justify-center text-black text-xs font-bold cursor-pointer motif-raised" @click.stop="closeWindow('contatti')">✕</div>
+                </div>
+            </div>
+            <div class="p-3 md:p-4 bg-motif-light max-h-[60vh] overflow-y-auto text-sm"
+                x-data="{ formStatus: '', formSubmitting: false }">
+                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1">Contatti</h2>
+
+                <div class="bg-white motif-sunken p-2 my-2">
+                    <div class="font-bold text-motif-titlebarDark">📍 Località</div>
+                    <span x-text="cv.contatti.localita"></span>
+                </div>
+
+                <div class="bg-white motif-sunken p-2 my-2">
+                    <div class="font-bold text-motif-titlebarDark">📧 Email</div>
+                    <span x-text="cv.contatti.email"></span>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="mt-4 p-3 bg-white motif-sunken">
+                    <div class="font-bold text-motif-titlebarDark mb-3">✉️ Invia un messaggio</div>
+
+                    <form :action="'https://formspree.io/f/' + cv.contatti.formspreeId" method="POST"
+                        @submit.prevent="
+                            formSubmitting = true;
+                            fetch($el.action, {
+                                method: 'POST',
+                                body: new FormData($el),
+                                headers: { 'Accept': 'application/json' }
+                            })
+                            .then(r => {
+                                formSubmitting = false;
+                                if (r.ok) {
+                                    formStatus = 'success';
+                                    $el.reset();
+                                } else {
+                                    formStatus = 'error';
+                                }
+                            })
+                            .catch(() => { formSubmitting = false; formStatus = 'error'; })
+                        ">
+
+                        <div class="mb-2">
+                            <label class="block text-xs font-bold mb-1">Nome *</label>
+                            <input type="text" name="name" required
+                                class="w-full p-1 bg-white motif-sunken text-sm focus:outline-none"
+                                placeholder="Il tuo nome">
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="block text-xs font-bold mb-1">Email *</label>
+                            <input type="email" name="email" required
+                                class="w-full p-1 bg-white motif-sunken text-sm focus:outline-none"
+                                placeholder="La tua email">
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="block text-xs font-bold mb-1">Oggetto</label>
+                            <input type="text" name="subject"
+                                class="w-full p-1 bg-white motif-sunken text-sm focus:outline-none"
+                                placeholder="Oggetto del messaggio">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="block text-xs font-bold mb-1">Messaggio *</label>
+                            <textarea name="message" required rows="4"
+                                class="w-full p-1 bg-white motif-sunken text-sm focus:outline-none resize-none"
+                                placeholder="Scrivi il tuo messaggio..."></textarea>
+                        </div>
+
+                        <button type="submit"
+                            :disabled="formSubmitting"
+                            class="w-full py-2 bg-motif-light motif-raised font-bold text-sm cursor-pointer hover:bg-motif-highlight disabled:opacity-50 disabled:cursor-wait">
+                            <span x-show="!formSubmitting">📤 Invia Messaggio</span>
+                            <span x-show="formSubmitting">⏳ Invio in corso...</span>
+                        </button>
+                    </form>
+
+                    <!-- Status messages -->
+                    <div x-show="formStatus === 'success'" x-transition
+                        class="mt-2 p-2 bg-green-100 border border-green-500 text-green-700 text-xs">
+                        ✅ Messaggio inviato con successo! Ti risponderò presto.
+                    </div>
+                    <div x-show="formStatus === 'error'" x-transition
+                        class="mt-2 p-2 bg-red-100 border border-red-500 text-red-700 text-xs">
+                        ❌ Errore nell'invio. Riprova o contattami via email.
+                    </div>
+                </div>
+
+                <div class="mt-4 p-2 bg-white motif-sunken">
+                    <p class="text-xs text-motif-dark">
+                        Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae
+                        in base al D. Lgs. 196/2003 e al Regolamento UE 2016/679
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </template>
+
+    <!-- Context Menu -->
+    <div x-show="contextMenu.show"
+        x-transition:enter="transition ease-out duration-100"
+        x-transition:enter-start="opacity-0 scale-95"
+        x-transition:enter-end="opacity-100 scale-100"
+        :style="{ left: contextMenu.x + 'px', top: contextMenu.y + 'px' }"
+        class="fixed z-[100] bg-motif-light motif-raised min-w-[170px] shadow-lg"
+        @click.stop>
+
+        <!-- Menu Header -->
+        <div class="window-titlebar text-black text-xs font-bold px-2 py-1 border-b border-[#4a6aa0]">
+            Workspace Menu
+        </div>
+
+        <div class="p-1">
+            <!-- Programs submenu -->
+            <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm flex justify-between items-center"
+                @click="openWindow('profilo'); hideContextMenu()">
+                <span>👤 Profilo</span>
+            </div>
+            <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm flex justify-between items-center"
+                @click="openWindow('esperienze'); hideContextMenu()">
+                <span>💼 Esperienze</span>
+            </div>
+            <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm flex justify-between items-center"
+                @click="openWindow('competenze'); hideContextMenu()">
+                <span>🔧 Competenze</span>
+            </div>
+            <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm flex justify-between items-center"
+                @click="openWindow('istruzione'); hideContextMenu()">
+                <span>🎓 Istruzione</span>
+            </div>
+            <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm flex justify-between items-center"
+                @click="openWindow('contatti'); hideContextMenu()">
+                <span>📧 Contatti</span>
+            </div>
+
+            <!-- Separator -->
+            <div class="my-1 border-t border-motif-dark"></div>
+
+            <!-- Actions -->
+            <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm"
+                @click="Object.keys(windows).forEach(id => openWindow(id)); hideContextMenu()">
+                📂 Apri Tutte
+            </div>
+            <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm"
+                @click="Object.keys(windows).forEach(id => closeWindow(id)); hideContextMenu()">
+                ✖️ Chiudi Tutte
+            </div>
+
+            <!-- Separator -->
+            <div class="my-1 border-t border-motif-dark"></div>
+
+            <!-- Refresh -->
+            <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm"
+                @click="location.reload()">
+                🔄 Aggiorna Desktop
+            </div>
+        </div>
+    </div>
+
+    <!-- Motif Panel (Taskbar) -->
+    <div class="fixed bottom-0 left-0 right-0 h-20 md:h-16 bg-motif-panel motif-raised z-50 flex items-center px-1 gap-1"
+        x-data="{ currentWorkspace: 1 }">
+
+        <!-- Left: All app launchers -->
+        <div class="hidden md:flex items-center gap-1 p-1 h-14 bg-motif-bg motif-sunken">
+            <div class="icon-btn w-10 h-12 bg-motif-light motif-raised flex items-center justify-center cursor-pointer text-lg" @click="openWindow('profilo')" title="Profilo">👤</div>
+            <div class="icon-btn w-10 h-12 bg-motif-light motif-raised flex items-center justify-center cursor-pointer text-lg" @click="openWindow('esperienze')" title="Esperienze">💼</div>
+            <div class="icon-btn w-10 h-12 bg-motif-light motif-raised flex items-center justify-center cursor-pointer text-lg" @click="openWindow('competenze')" title="Competenze">🔧</div>
+            <div class="icon-btn w-10 h-12 bg-motif-light motif-raised flex items-center justify-center cursor-pointer text-lg" @click="openWindow('istruzione')" title="Istruzione">🎓</div>
+            <div class="icon-btn w-10 h-12 bg-motif-light motif-raised flex items-center justify-center cursor-pointer text-lg" @click="openWindow('contatti')" title="Contatti">📧</div>
+        </div>
+
+        <!-- Workspace switcher (center) -->
+        <div class="flex-1 flex items-center justify-center">
+            <div class="grid grid-cols-2 gap-0.5 p-1 bg-motif-bg motif-sunken">
+                <div class="workspace-btn px-4 md:px-6 py-1 text-xs font-bold cursor-pointer text-center transition-all duration-75"
+                    :class="currentWorkspace === 1 ? 'bg-[#4a6aa0] text-white motif-sunken' : 'bg-motif-titlebar text-black motif-raised'"
+                    @click="currentWorkspace = 1">One</div>
+                <div class="workspace-btn px-4 md:px-6 py-1 text-xs font-bold cursor-pointer text-center transition-all duration-75"
+                    :class="currentWorkspace === 2 ? 'bg-[#4a6aa0] text-white motif-sunken' : 'bg-motif-titlebar text-black motif-raised'"
+                    @click="currentWorkspace = 2">Two</div>
+                <div class="workspace-btn px-4 md:px-6 py-1 text-xs font-bold cursor-pointer text-center transition-all duration-75"
+                    :class="currentWorkspace === 3 ? 'bg-[#4a6aa0] text-white motif-sunken' : 'bg-motif-titlebar text-black motif-raised'"
+                    @click="currentWorkspace = 3">Three</div>
+                <div class="workspace-btn px-4 md:px-6 py-1 text-xs font-bold cursor-pointer text-center transition-all duration-75"
+                    :class="currentWorkspace === 4 ? 'bg-[#4a6aa0] text-white motif-sunken' : 'bg-motif-titlebar text-black motif-raised'"
+                    @click="currentWorkspace = 4">Four</div>
+            </div>
+        </div>
+
+        <!-- Right: Utilities -->
+        <div class="hidden md:flex items-center gap-1 p-1 h-14 bg-motif-bg motif-sunken">
+            <div class="icon-btn w-12 h-12 bg-motif-light motif-raised flex items-center justify-center cursor-pointer text-2xl" title="Stampa" @click="window.print()">🖨️</div>
+            <div class="icon-btn w-12 h-12 bg-motif-light motif-raised flex items-center justify-center cursor-pointer text-2xl" title="Aiuto">❓</div>
+        </div>
+
+        <!-- Clock area -->
+        <div class="hidden md:flex items-center p-1 h-14 bg-motif-bg motif-sunken">
+            <div class="icon-btn w-20 h-12 bg-motif-light motif-raised flex flex-col items-center justify-center cursor-pointer text-xs font-bold font-mono leading-tight">
+                <span x-text="dateStr"></span>
+                <span x-text="clock"></span>
+            </div>
+        </div>
+
+        <!-- Mobile: clock only -->
+        <div class="flex md:hidden items-center gap-1 px-2 h-10 bg-motif-bg motif-sunken">
+            <div class="px-2 text-xs font-bold text-motif-text font-mono flex flex-col items-center leading-tight">
+                <span x-text="dateStr"></span>
+                <span x-text="clock"></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
