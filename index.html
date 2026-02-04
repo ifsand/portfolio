@@ -8,24 +8,27 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script id="cv-data" type="application/json">
     {
-        "profilo": {
-            "nome": "David Serena",
-            "titolo": "Full Stack Software Engineer",
-            "descrizione": "Full Stack developer con <strong>10 anni di esperienza</strong> nello sviluppo software. Ho ricoperto ruoli sia operativi che di team leader, con esperienza in mentorship per figure junior.",
-            "specializzazioni": [
-                "Sviluppo di e-commerce e piattaforme headless",
-                "Integrazione di servizi e middleware ERP",
-                "Sistemi VoIP e applicazioni real-time",
-                "Gestione di big data"
-            ]
+        "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+        "basics": {
+            "name": "David Serena",
+            "label": "Full Stack Software Engineer",
+            "email": "davidserena84@gmail.com",
+            "summary": "Full Stack developer con <strong>10 anni di esperienza</strong> nello sviluppo software. Ho ricoperto ruoli sia operativi che di team leader, con esperienza in mentorship per figure junior.",
+            "location": {
+                "city": "San Miniato",
+                "region": "PI",
+                "countryCode": "IT"
+            },
+            "profiles": []
         },
-        "esperienze": [
+        "work": [
             {
-                "azienda": "Adiacent",
-                "luogo": "Empoli (FI)",
-                "ruolo": "Full Stack Engineer",
-                "periodo": "2021 - OGGI",
-                "attivita": [
+                "name": "Adiacent",
+                "location": "Empoli (FI)",
+                "position": "Full Stack Engineer",
+                "startDate": "2021",
+                "endDate": "",
+                "highlights": [
                     "App Mobile cross-platform in React Native e Expo",
                     "Frontend per e-commerce headless (Nuxt.js e Next.js)",
                     "Middleware per integrazione ERP e piattaforme e-commerce",
@@ -37,21 +40,23 @@
                 ]
             },
             {
-                "azienda": "Timenet",
-                "luogo": "Empoli (FI)",
-                "ruolo": "Full Stack Engineer",
-                "periodo": "2020 - 2021",
-                "attivita": [
+                "name": "Timenet",
+                "location": "Empoli (FI)",
+                "position": "Full Stack Engineer",
+                "startDate": "2020",
+                "endDate": "2021",
+                "highlights": [
                     "CRM con ticketing e fatturazione integrata",
                     "Integrazione gestionale con Zabbix per allarmi"
                 ]
             },
             {
-                "azienda": "Advise",
-                "luogo": "Roma",
-                "ruolo": "Full Stack Engineer",
-                "periodo": "2014 - 2019",
-                "attivita": [
+                "name": "Advise",
+                "location": "Roma",
+                "position": "Full Stack Engineer",
+                "startDate": "2014",
+                "endDate": "2019",
+                "highlights": [
                     "Applicazioni Node.js con Asterisk PBX (WebSockets e REST API)",
                     "CRM/Softswitch con Asterisk e Kamailio",
                     "Stack: PHP (Laravel) / Node.js (Express) / Vue",
@@ -61,48 +66,65 @@
                 ]
             }
         ],
-        "competenze": [
-            { "categoria": "Linguaggi", "items": "PHP, JavaScript, TypeScript, C/C++, Rust, Go, Java, Python" },
-            { "categoria": "Frontend", "items": "React, Vue, Next.js, Nuxt.js, Tailwind, Sass/Scss, Astro, GraphQL, Storybook, PWA" },
-            { "categoria": "Backend", "items": "Laravel, Node.js, Fastify, Express" },
-            { "categoria": "Mobile", "items": "React Native, Expo" },
-            { "categoria": "Telecom", "items": "Kamailio, Asterisk, Homer" },
-            { "categoria": "E-commerce", "items": "Magento, BigCommerce, Commercelayer, Shopify, Akeneo" },
-            { "categoria": "Database", "items": "PostgreSQL, MySQL, Redis, MongoDB, Couchbase" },
-            { "categoria": "DevOps", "items": "Kubernetes, Docker, Ansible, Terraform" },
-            { "categoria": "Tools", "items": "GitLab, GitHub, Jira, Confluence" },
-            { "categoria": "Piattaforme", "items": "AWS" }
-        ],
-        "istruzione": [
+        "education": [
             {
-                "istituto": "Università di Pisa",
-                "titolo": "Laurea Specialistica",
-                "periodo": "2008 - 2013",
-                "corso": "Ingegneria Informatica",
-                "dettagli": "Curriculum: Sistemi industriali e sistemi Web",
-                "tesi": "Definizione di strumenti e analisi di gerarchie di memoria per sistemi mono e multiprocessore on-chip"
+                "institution": "Università di Pisa",
+                "area": "Ingegneria Informatica",
+                "studyType": "Laurea Specialistica",
+                "startDate": "2008",
+                "endDate": "2013",
+                "courses": [
+                    "Curriculum: Sistemi industriali e sistemi Web",
+                    "Tesi: Definizione di strumenti e analisi di gerarchie di memoria per sistemi mono e multiprocessore on-chip"
+                ]
             },
             {
-                "istituto": "Università di Pisa",
-                "titolo": "Laurea Triennale",
-                "periodo": "2003 - 2007",
-                "corso": "Ingegneria Informatica",
-                "tesi": "Il protocollo OSPF e progetto di una rete aziendale"
+                "institution": "Università di Pisa",
+                "area": "Ingegneria Informatica",
+                "studyType": "Laurea Triennale",
+                "startDate": "2003",
+                "endDate": "2007",
+                "courses": [
+                    "Tesi: Il protocollo OSPF e progetto di una rete aziendale"
+                ]
             },
             {
-                "istituto": "MongoDB University",
-                "titolo": "Roma",
-                "periodo": "2015",
-                "corso": "MongoDB Essentials Public Training"
+                "institution": "MongoDB University",
+                "area": "MongoDB Essentials Public Training",
+                "studyType": "Certificazione",
+                "startDate": "2015",
+                "endDate": "2015",
+                "courses": []
             }
         ],
-        "lingue": [
-            { "lingua": "Italiano", "livello": "Madrelingua" },
-            { "lingua": "Inglese", "livello": "B1" }
+        "skills": [
+            { "name": "Linguaggi", "keywords": ["PHP", "JavaScript", "TypeScript", "C/C++", "Rust", "Go", "Java", "Python"] },
+            { "name": "Frontend", "keywords": ["React", "Vue", "Next.js", "Nuxt.js", "Tailwind", "Sass/Scss", "Astro", "GraphQL", "Storybook", "PWA"] },
+            { "name": "Backend", "keywords": ["Laravel", "Node.js", "Fastify", "Express"] },
+            { "name": "Mobile", "keywords": ["React Native", "Expo"] },
+            { "name": "Telecom", "keywords": ["Kamailio", "Asterisk", "Homer"] },
+            { "name": "E-commerce", "keywords": ["Magento", "BigCommerce", "Commercelayer", "Shopify", "Akeneo"] },
+            { "name": "Database", "keywords": ["PostgreSQL", "MySQL", "Redis", "MongoDB", "Couchbase"] },
+            { "name": "DevOps", "keywords": ["Kubernetes", "Docker", "Ansible", "Terraform"] },
+            { "name": "Tools", "keywords": ["GitLab", "GitHub", "Jira", "Confluence"] },
+            { "name": "Piattaforme", "keywords": ["AWS"] }
         ],
-        "contatti": {
-            "localita": "San Miniato (PI), Italia",
-            "email": "davidserena84@gmail.com",
+        "languages": [
+            { "language": "Italiano", "fluency": "Madrelingua" },
+            { "language": "Inglese", "fluency": "B1" }
+        ],
+        "interests": [
+            {
+                "name": "Specializzazioni",
+                "keywords": [
+                    "Sviluppo di e-commerce e piattaforme headless",
+                    "Integrazione di servizi e middleware ERP",
+                    "Sistemi VoIP e applicazioni real-time",
+                    "Gestione di big data"
+                ]
+            }
+        ],
+        "meta": {
             "formspreeId": "xzdvnjdb"
         }
     }
@@ -348,6 +370,14 @@
         contextMenu: { show: false, x: 0, y: 0 },
         menuOpen: null,
         cv: null,
+        formatPeriod(start, end) {
+            if (!end || end === '') return start + ' - OGGI';
+            return start + ' - ' + end;
+        },
+        formatLocation(loc) {
+            if (!loc) return '';
+            return loc.city + ' (' + loc.region + '), ' + (loc.countryCode === 'IT' ? 'Italia' : loc.countryCode);
+        },
         openWindow(id) {
             this.windows[id].open = true;
             this.bringToFront(id);
@@ -464,23 +494,25 @@
             <div class="titlebar flex items-center window-titlebar text-black select-none cursor-move border-b border-[#4a6aa0]"
                 @mousedown="startDrag($event, 'profilo')"
                 @touchstart.passive="startDrag($event, 'profilo')">
-                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold">Profilo - <span x-text="cv.profilo.nome"></span></span>
+                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold">Profilo - <span x-text="cv.basics.name"></span></span>
                 <div class="flex gap-1 p-1">
                     <div class="motif-btn w-6 h-6 md:w-5 md:h-5 bg-motif-light flex items-center justify-center text-black text-xs font-bold cursor-pointer motif-raised" @click.stop="closeWindow('profilo')">✕</div>
                 </div>
             </div>
             <div class="p-3 md:p-4 bg-motif-light max-h-[60vh] overflow-y-auto text-sm">
-                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1" x-text="cv.profilo.nome"></h2>
-                <p class="font-bold text-green-700 mb-2" x-text="cv.profilo.titolo"></p>
-                <p class="mb-4" x-html="cv.profilo.descrizione"></p>
-                <div class="bg-white motif-sunken p-2 md:p-3">
-                    <div class="font-bold text-motif-titlebarDark mb-1">Specializzazioni:</div>
-                    <ul class="ml-5 list-disc">
-                        <template x-for="spec in cv.profilo.specializzazioni" :key="spec">
-                            <li x-text="spec"></li>
-                        </template>
-                    </ul>
-                </div>
+                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1" x-text="cv.basics.name"></h2>
+                <p class="font-bold text-green-700 mb-2" x-text="cv.basics.label"></p>
+                <p class="mb-4" x-html="cv.basics.summary"></p>
+                <template x-if="cv.interests && cv.interests.length > 0">
+                    <div class="bg-white motif-sunken p-2 md:p-3">
+                        <div class="font-bold text-motif-titlebarDark mb-1" x-text="cv.interests[0].name + ':'"></div>
+                        <ul class="ml-5 list-disc">
+                            <template x-for="keyword in cv.interests[0].keywords" :key="keyword">
+                                <li x-text="keyword"></li>
+                            </template>
+                        </ul>
+                    </div>
+                </template>
             </div>
         </div>
 
@@ -501,15 +533,15 @@
             </div>
             <div class="p-3 md:p-4 bg-motif-light max-h-[60vh] overflow-y-auto text-sm">
                 <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1">Esperienze Lavorative</h2>
-                <template x-for="(exp, index) in cv.esperienze" :key="index">
+                <template x-for="(job, index) in cv.work" :key="index">
                     <div class="bg-white motif-sunken p-2 md:p-3 my-2">
                         <div class="font-bold text-motif-titlebarDark">
-                            <span x-text="exp.azienda"></span>, <span x-text="exp.luogo"></span> - <span x-text="exp.ruolo"></span>
+                            <span x-text="job.name"></span>, <span x-text="job.location"></span> - <span x-text="job.position"></span>
                         </div>
-                        <div class="text-motif-dark italic text-xs" x-text="exp.periodo"></div>
+                        <div class="text-motif-dark italic text-xs" x-text="formatPeriod(job.startDate, job.endDate)"></div>
                         <ul class="ml-5 list-disc mt-2">
-                            <template x-for="(att, i) in exp.attivita" :key="i">
-                                <li x-text="att"></li>
+                            <template x-for="(highlight, i) in job.highlights" :key="i">
+                                <li x-text="highlight"></li>
                             </template>
                         </ul>
                     </div>
@@ -534,10 +566,10 @@
             </div>
             <div class="p-3 md:p-4 bg-motif-light max-h-[60vh] overflow-y-auto text-sm">
                 <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1">Competenze Tecniche</h2>
-                <template x-for="(comp, index) in cv.competenze" :key="index">
+                <template x-for="(skill, index) in cv.skills" :key="index">
                     <div class="bg-white motif-sunken p-2 my-2">
-                        <div class="font-bold text-motif-titlebarDark" x-text="comp.categoria"></div>
-                        <span x-text="comp.items"></span>
+                        <div class="font-bold text-motif-titlebarDark" x-text="skill.name"></div>
+                        <span x-text="skill.keywords.join(', ')"></span>
                     </div>
                 </template>
             </div>
@@ -560,25 +592,24 @@
             </div>
             <div class="p-3 md:p-4 bg-motif-light max-h-[60vh] overflow-y-auto text-sm">
                 <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1">Istruzione e Formazione</h2>
-                <template x-for="(edu, index) in cv.istruzione" :key="index">
+                <template x-for="(edu, index) in cv.education" :key="index">
                     <div class="bg-white motif-sunken p-2 md:p-3 my-2">
                         <div class="font-bold text-motif-titlebarDark">
-                            <span x-text="edu.istituto"></span> - <span x-text="edu.titolo"></span>
+                            <span x-text="edu.institution"></span> - <span x-text="edu.studyType"></span>
                         </div>
-                        <div class="text-motif-dark italic text-xs" x-text="edu.periodo"></div>
-                        <p class="mt-2"><strong x-text="edu.corso"></strong></p>
-                        <p class="mt-1" x-show="edu.dettagli" x-text="edu.dettagli"></p>
-                        <p class="mt-1 text-xs italic" x-show="edu.tesi">
-                            Tesi: <span x-text="edu.tesi"></span>
-                        </p>
+                        <div class="text-motif-dark italic text-xs" x-text="formatPeriod(edu.startDate, edu.endDate)"></div>
+                        <p class="mt-2"><strong x-text="edu.area"></strong></p>
+                        <template x-for="(course, i) in edu.courses" :key="i">
+                            <p class="mt-1 text-xs" :class="course.startsWith('Tesi:') ? 'italic' : ''" x-text="course"></p>
+                        </template>
                     </div>
                 </template>
                 <h3 class="text-motif-titlebarDark font-bold mt-5 mb-2">Lingue</h3>
                 <div class="bg-white motif-sunken p-2">
-                    <template x-for="(lang, index) in cv.lingue" :key="index">
+                    <template x-for="(lang, index) in cv.languages" :key="index">
                         <div>
-                            <strong x-text="lang.lingua + ':'"></strong> <span x-text="lang.livello"></span>
-                            <br x-show="index < cv.lingue.length - 1">
+                            <strong x-text="lang.language + ':'"></strong> <span x-text="lang.fluency"></span>
+                            <br x-show="index < cv.languages.length - 1">
                         </div>
                     </template>
                 </div>
@@ -605,15 +636,15 @@
                 <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1">Contatti</h2>
                 <div class="bg-white motif-sunken p-2 my-2">
                     <div class="font-bold text-motif-titlebarDark">📍 Località</div>
-                    <span x-text="cv.contatti.localita"></span>
+                    <span x-text="formatLocation(cv.basics.location)"></span>
                 </div>
                 <div class="bg-white motif-sunken p-2 my-2">
                     <div class="font-bold text-motif-titlebarDark">📧 Email</div>
-                    <span x-text="cv.contatti.email"></span>
+                    <span x-text="cv.basics.email"></span>
                 </div>
                 <div class="mt-4 p-3 bg-white motif-sunken">
                     <div class="font-bold text-motif-titlebarDark mb-3">✉️ Invia un messaggio</div>
-                    <form :action="'https://formspree.io/f/' + cv.contatti.formspreeId" method="POST"
+                    <form :action="'https://formspree.io/f/' + cv.meta.formspreeId" method="POST"
                         @submit.prevent="
                             formSubmitting = true;
                             fetch($el.action, {
