@@ -6,7 +6,7 @@
     <title>David Serena</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script id="cv-data" type="application/json">
+    <script id="cv-data-it" type="application/json">
     {
         "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
         "basics": {
@@ -121,6 +121,129 @@
                     "Integrazione di servizi e middleware ERP",
                     "Sistemi VoIP e applicazioni real-time",
                     "Gestione di big data"
+                ]
+            }
+        ],
+        "meta": {
+            "formspreeId": "xzdvnjdb"
+        }
+    }
+    </script>
+    <script id="cv-data-en" type="application/json">
+    {
+        "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+        "basics": {
+            "name": "David Serena",
+            "label": "Full Stack Software Engineer",
+            "email": "davidserena84@gmail.com",
+            "summary": "Full Stack developer with <strong>10 years of experience</strong> in software development. I have held both operational and team leader roles, with experience mentoring junior team members.",
+            "location": {
+                "city": "San Miniato",
+                "region": "PI",
+                "countryCode": "IT"
+            },
+            "profiles": []
+        },
+        "work": [
+            {
+                "name": "Adiacent",
+                "location": "Empoli (FI), Italy",
+                "position": "Full Stack Engineer",
+                "startDate": "2021",
+                "endDate": "",
+                "highlights": [
+                    "Cross-platform mobile apps with React Native and Expo",
+                    "Frontends for headless e-commerce (Nuxt.js and Next.js)",
+                    "Middleware for ERP and e-commerce platform integration",
+                    "Direct interaction with Clients for requirements gathering and consulting",
+                    "Optimization of Composable Commerce projects",
+                    "PWA development on Magento (Hyvä theme)",
+                    "DevOps with Ansible and Terraform",
+                    "Custom apps with Vue/React, GraphQL, Laravel and Fastify"
+                ]
+            },
+            {
+                "name": "Timenet",
+                "location": "Empoli (FI), Italy",
+                "position": "Full Stack Engineer",
+                "startDate": "2020",
+                "endDate": "2021",
+                "highlights": [
+                    "CRM with integrated ticketing and billing",
+                    "Management system integration with Zabbix for alerts"
+                ]
+            },
+            {
+                "name": "Advise",
+                "location": "Rome, Italy",
+                "position": "Full Stack Engineer",
+                "startDate": "2014",
+                "endDate": "2019",
+                "highlights": [
+                    "Node.js applications with Asterisk PBX (WebSockets and REST API)",
+                    "CRM/Softswitch with Asterisk and Kamailio",
+                    "Stack: PHP (Laravel) / Node.js (Express) / Vue",
+                    "Databases: Postgres, Couchbase",
+                    "Microservices on Kubernetes",
+                    "Monitoring with SipCapture Homer"
+                ]
+            }
+        ],
+        "education": [
+            {
+                "institution": "University of Pisa",
+                "area": "Computer Engineering",
+                "studyType": "Master's Degree",
+                "startDate": "2008",
+                "endDate": "2013",
+                "courses": [
+                    "Curriculum: Industrial systems and Web systems",
+                    "Thesis: Definition of tools and analysis of memory hierarchies for single and multi-processor on-chip systems"
+                ]
+            },
+            {
+                "institution": "University of Pisa",
+                "area": "Computer Engineering",
+                "studyType": "Bachelor's Degree",
+                "startDate": "2003",
+                "endDate": "2007",
+                "courses": [
+                    "Thesis: The OSPF protocol and design of a corporate network"
+                ]
+            },
+            {
+                "institution": "MongoDB University",
+                "area": "MongoDB Essentials Public Training",
+                "studyType": "Certification",
+                "startDate": "2015",
+                "endDate": "2015",
+                "courses": []
+            }
+        ],
+        "skills": [
+            { "name": "Languages", "keywords": ["PHP", "JavaScript", "TypeScript", "C/C++", "Rust", "Go", "Java", "Python"] },
+            { "name": "Frontend", "keywords": ["React", "Vue", "Next.js", "Nuxt.js", "Tailwind", "Sass/Scss", "Astro", "GraphQL", "Storybook", "PWA"] },
+            { "name": "Backend", "keywords": ["Laravel", "Node.js", "Fastify", "Express"] },
+            { "name": "Mobile", "keywords": ["React Native", "Expo"] },
+            { "name": "Telecom", "keywords": ["Kamailio", "Asterisk", "Homer"] },
+            { "name": "E-commerce", "keywords": ["Magento", "BigCommerce", "Commercelayer", "Shopify", "Akeneo"] },
+            { "name": "Database", "keywords": ["PostgreSQL", "MySQL", "Redis", "MongoDB", "Couchbase"] },
+            { "name": "DevOps", "keywords": ["Kubernetes", "Docker", "Ansible", "Terraform"] },
+            { "name": "Tools", "keywords": ["GitLab", "GitHub", "Jira", "Confluence"] },
+            { "name": "Platforms", "keywords": ["AWS"] }
+        ],
+        "languages": [
+            { "language": "Italian", "fluency": "Native" },
+            { "language": "English", "fluency": "B1" }
+        ],
+        "interests": [
+            {
+                "name": "Specializations",
+                "keywords": [
+                    "E-commerce and headless platform development",
+                    "Service integration and ERP middleware",
+                    "VoIP systems and real-time applications",
+                    "Big data management"
                 ]
             }
         ],
@@ -370,13 +493,141 @@
         contextMenu: { show: false, x: 0, y: 0 },
         menuOpen: null,
         cv: null,
+        cvSources: {},
+        lang: 'it',
+        i18n: {
+            it: {
+                profilo: 'Profilo',
+                esperienze: 'Esperienze',
+                esperienzeFull: 'Esperienze Lavorative',
+                competenze: 'Competenze',
+                competenzeFull: 'Competenze Tecniche',
+                istruzione: 'Istruzione',
+                istruzioneFull: 'Istruzione e Formazione',
+                contatti: 'Contatti',
+                contattiFull: 'Informazioni di Contatto',
+                printCv: 'Stampa CV',
+                print: 'Stampa',
+                today: 'OGGI',
+                country_IT: 'Italia',
+                languagesSection: 'Lingue',
+                locationLabel: 'Località',
+                emailLabel: 'Email',
+                sendMessageTitle: 'Invia un messaggio',
+                nameField: 'Nome',
+                namePlaceholder: 'Il tuo nome',
+                emailPlaceholder: 'La tua email',
+                subjectField: 'Oggetto',
+                subjectPlaceholder: 'Oggetto del messaggio',
+                messageField: 'Messaggio',
+                messagePlaceholder: 'Scrivi il tuo messaggio...',
+                sendBtn: 'Invia Messaggio',
+                sending: 'Invio in corso...',
+                successMsg: 'Messaggio inviato con successo! Ti risponderò presto.',
+                errorMsg: 'Errore nell\'invio. Riprova o contattami via email.',
+                privacy: 'Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae in base al D. Lgs. 196/2003 e al Regolamento UE 2016/679',
+                workspaceMenu: 'Workspace Menu',
+                openAll: 'Apri Tutte',
+                closeAll: 'Chiudi Tutte',
+                refreshDesktop: 'Aggiorna Desktop',
+                refresh: 'Aggiorna',
+                sections: 'Sezioni',
+                actions: 'Azioni',
+                noOpenWindows: 'Nessuna finestra aperta',
+                guideTitle: 'Guida',
+                guideIntro: 'Desktop classico in stile anni \'90.',
+                guideIcons: 'Icone:',
+                guideIconsDesc: 'Clicca per aprire',
+                guideWindows: 'Finestre:',
+                guideWindowsDesc: 'Trascinabili, chiudi con X',
+                guideMenu: 'Menu:',
+                guideMenuDesc: 'Accesso rapido alle sezioni',
+                guideTaskbar: 'Barra app:',
+                guideTaskbarDesc: 'Gestisci finestre aperte',
+                guideMobileBar: 'Barra:',
+                guideMobileBarDesc: 'Gestisci finestre',
+                guideMobileMenu: 'Menu:',
+                guideMobileMenuDesc: 'Tutte le sezioni',
+                guidePrintHint: 'Stampa',
+                guidePrintTail: 'per il PDF!',
+                menu: 'Menu',
+                language: 'Lingua',
+                italian: 'Italiano',
+                english: 'Inglese',
+                portfolioTitle: 'Portfolio - David Serena'
+            },
+            en: {
+                profilo: 'Profile',
+                esperienze: 'Experience',
+                esperienzeFull: 'Work Experience',
+                competenze: 'Skills',
+                competenzeFull: 'Technical Skills',
+                istruzione: 'Education',
+                istruzioneFull: 'Education & Training',
+                contatti: 'Contact',
+                contattiFull: 'Contact Information',
+                printCv: 'Print CV',
+                print: 'Print',
+                today: 'TODAY',
+                country_IT: 'Italy',
+                languagesSection: 'Languages',
+                locationLabel: 'Location',
+                emailLabel: 'Email',
+                sendMessageTitle: 'Send a message',
+                nameField: 'Name',
+                namePlaceholder: 'Your name',
+                emailPlaceholder: 'Your email',
+                subjectField: 'Subject',
+                subjectPlaceholder: 'Message subject',
+                messageField: 'Message',
+                messagePlaceholder: 'Write your message...',
+                sendBtn: 'Send Message',
+                sending: 'Sending...',
+                successMsg: 'Message sent successfully! I will get back to you soon.',
+                errorMsg: 'Error sending the message. Please retry or contact me by email.',
+                privacy: 'I authorize the processing of personal data contained in my curriculum vitae pursuant to Italian Legislative Decree 196/2003 and EU Regulation 2016/679',
+                workspaceMenu: 'Workspace Menu',
+                openAll: 'Open All',
+                closeAll: 'Close All',
+                refreshDesktop: 'Refresh Desktop',
+                refresh: 'Refresh',
+                sections: 'Sections',
+                actions: 'Actions',
+                noOpenWindows: 'No windows open',
+                guideTitle: 'Help',
+                guideIntro: 'Classic 90s-style desktop.',
+                guideIcons: 'Icons:',
+                guideIconsDesc: 'Click to open',
+                guideWindows: 'Windows:',
+                guideWindowsDesc: 'Draggable, close with X',
+                guideMenu: 'Menu:',
+                guideMenuDesc: 'Quick access to sections',
+                guideTaskbar: 'Taskbar:',
+                guideTaskbarDesc: 'Manage open windows',
+                guideMobileBar: 'Bar:',
+                guideMobileBarDesc: 'Manage windows',
+                guideMobileMenu: 'Menu:',
+                guideMobileMenuDesc: 'All sections',
+                guidePrintHint: 'Print',
+                guidePrintTail: 'for the PDF!',
+                menu: 'Menu',
+                language: 'Language',
+                italian: 'Italian',
+                english: 'English',
+                portfolioTitle: 'Portfolio - David Serena'
+            }
+        },
+        t(key) {
+            return (this.i18n[this.lang] && this.i18n[this.lang][key]) || key;
+        },
         formatPeriod(start, end) {
-            if (!end || end === '') return start + ' - OGGI';
+            if (!end || end === '') return start + ' - ' + this.t('today');
             return start + ' - ' + end;
         },
         formatLocation(loc) {
             if (!loc) return '';
-            return loc.city + ' (' + loc.region + '), ' + (loc.countryCode === 'IT' ? 'Italia' : loc.countryCode);
+            const country = this.t('country_' + loc.countryCode) || loc.countryCode;
+            return loc.city + ' (' + loc.region + '), ' + country;
         },
         openWindow(id) {
             this.windows[id].open = true;
@@ -434,13 +685,36 @@
         hideContextMenu() {
             this.contextMenu.show = false;
         },
+        detectLang() {
+            try {
+                const stored = localStorage.getItem('cv-lang');
+                if (stored === 'it' || stored === 'en') return stored;
+            } catch (e) {}
+            const nav = ((navigator.language || navigator.userLanguage) || '').toLowerCase();
+            return nav.startsWith('it') ? 'it' : 'en';
+        },
+        setLang(lang) {
+            if (lang !== 'it' && lang !== 'en') return;
+            this.lang = lang;
+            this.cv = this.cvSources[lang];
+            try { localStorage.setItem('cv-lang', lang); } catch (e) {}
+            document.documentElement.lang = lang;
+            this.updateClock();
+        },
         updateClock() {
             const now = new Date();
-            this.clock = now.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
-            this.dateStr = now.toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            const locale = this.lang === 'en' ? 'en-GB' : 'it-IT';
+            this.clock = now.toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' });
+            this.dateStr = now.toLocaleDateString(locale, { day: '2-digit', month: '2-digit', year: 'numeric' });
         },
         init() {
-            this.cv = JSON.parse(document.getElementById('cv-data').textContent);
+            this.cvSources = {
+                it: JSON.parse(document.getElementById('cv-data-it').textContent),
+                en: JSON.parse(document.getElementById('cv-data-en').textContent)
+            };
+            this.lang = this.detectLang();
+            this.cv = this.cvSources[this.lang];
+            document.documentElement.lang = this.lang;
             this.updateClock();
             setInterval(() => this.updateClock(), 1000);
         }
@@ -457,30 +731,30 @@
         <div class="flex flex-wrap">
             <div class="desktop-icon w-20 md:w-24 text-center m-2 md:m-3 cursor-pointer select-none" @click="openWindow('profilo')">
                 <div class="icon-btn w-14 h-14 md:w-16 md:h-16 bg-motif-light motif-raised mx-auto mb-1 flex items-center justify-center text-3xl md:text-4xl">👤</div>
-                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold">Profilo</div>
+                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold" x-text="t('profilo')"></div>
             </div>
             <div class="desktop-icon w-20 md:w-24 text-center m-2 md:m-3 cursor-pointer select-none" @click="openWindow('esperienze')">
                 <div class="icon-btn w-14 h-14 md:w-16 md:h-16 bg-motif-light motif-raised mx-auto mb-1 flex items-center justify-center text-3xl md:text-4xl">💼</div>
-                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold">Esperienze</div>
+                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold" x-text="t('esperienze')"></div>
             </div>
             <div class="desktop-icon w-20 md:w-24 text-center m-2 md:m-3 cursor-pointer select-none" @click="openWindow('competenze')">
                 <div class="icon-btn w-14 h-14 md:w-16 md:h-16 bg-motif-light motif-raised mx-auto mb-1 flex items-center justify-center text-3xl md:text-4xl">🔧</div>
-                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold">Competenze</div>
+                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold" x-text="t('competenze')"></div>
             </div>
             <div class="desktop-icon w-20 md:w-24 text-center m-2 md:m-3 cursor-pointer select-none" @click="openWindow('istruzione')">
                 <div class="icon-btn w-14 h-14 md:w-16 md:h-16 bg-motif-light motif-raised mx-auto mb-1 flex items-center justify-center text-3xl md:text-4xl">🎓</div>
-                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold">Istruzione</div>
+                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold" x-text="t('istruzione')"></div>
             </div>
             <div class="desktop-icon w-20 md:w-24 text-center m-2 md:m-3 cursor-pointer select-none" @click="openWindow('contatti')">
                 <div class="icon-btn w-14 h-14 md:w-16 md:h-16 bg-motif-light motif-raised mx-auto mb-1 flex items-center justify-center text-3xl md:text-4xl">📧</div>
-                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold">Contatti</div>
+                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold" x-text="t('contatti')"></div>
             </div>
         </div>
 
         <div class="absolute bottom-24 md:bottom-20 right-2 md:right-5">
             <div class="desktop-icon w-20 md:w-24 text-center cursor-pointer select-none" @click="window.print()">
                 <div class="icon-btn w-14 h-14 md:w-16 md:h-16 bg-motif-light motif-raised mx-auto mb-1 flex items-center justify-center text-3xl md:text-4xl">🖨️</div>
-                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold">Stampa CV</div>
+                <div class="text-white text-xs drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] font-bold" x-text="t('printCv')"></div>
             </div>
         </div>
 
@@ -494,7 +768,7 @@
             <div class="titlebar flex items-center window-titlebar text-black select-none cursor-move border-b border-[#4a6aa0]"
                 @mousedown="startDrag($event, 'profilo')"
                 @touchstart.passive="startDrag($event, 'profilo')">
-                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold">Profilo - <span x-text="cv.basics.name"></span></span>
+                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold"><span x-text="t('profilo')"></span> - <span x-text="cv.basics.name"></span></span>
                 <div class="flex gap-1 p-1">
                     <div class="motif-btn w-6 h-6 md:w-5 md:h-5 bg-motif-light flex items-center justify-center text-black text-xs font-bold cursor-pointer motif-raised" @click.stop="closeWindow('profilo')">✕</div>
                 </div>
@@ -526,13 +800,13 @@
             <div class="titlebar flex items-center window-titlebar text-black select-none cursor-move border-b border-[#4a6aa0]"
                 @mousedown="startDrag($event, 'esperienze')"
                 @touchstart.passive="startDrag($event, 'esperienze')">
-                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold">Esperienze Lavorative</span>
+                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold" x-text="t('esperienzeFull')"></span>
                 <div class="flex gap-1 p-1">
                     <div class="motif-btn w-6 h-6 md:w-5 md:h-5 bg-motif-light flex items-center justify-center text-black text-xs font-bold cursor-pointer motif-raised" @click.stop="closeWindow('esperienze')">✕</div>
                 </div>
             </div>
             <div class="p-3 md:p-4 bg-motif-light max-h-[60vh] overflow-y-auto text-sm">
-                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1">Esperienze Lavorative</h2>
+                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1" x-text="t('esperienzeFull')"></h2>
                 <template x-for="(job, index) in cv.work" :key="index">
                     <div class="bg-white motif-sunken p-2 md:p-3 my-2">
                         <div class="font-bold text-motif-titlebarDark">
@@ -559,13 +833,13 @@
             <div class="titlebar flex items-center window-titlebar text-black select-none cursor-move border-b border-[#4a6aa0]"
                 @mousedown="startDrag($event, 'competenze')"
                 @touchstart.passive="startDrag($event, 'competenze')">
-                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold">Competenze Tecniche</span>
+                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold" x-text="t('competenzeFull')"></span>
                 <div class="flex gap-1 p-1">
                     <div class="motif-btn w-6 h-6 md:w-5 md:h-5 bg-motif-light flex items-center justify-center text-black text-xs font-bold cursor-pointer motif-raised" @click.stop="closeWindow('competenze')">✕</div>
                 </div>
             </div>
             <div class="p-3 md:p-4 bg-motif-light max-h-[60vh] overflow-y-auto text-sm">
-                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1">Competenze Tecniche</h2>
+                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1" x-text="t('competenzeFull')"></h2>
                 <template x-for="(skill, index) in cv.skills" :key="index">
                     <div class="bg-white motif-sunken p-2 my-2">
                         <div class="font-bold text-motif-titlebarDark" x-text="skill.name"></div>
@@ -585,13 +859,13 @@
             <div class="titlebar flex items-center window-titlebar text-black select-none cursor-move border-b border-[#4a6aa0]"
                 @mousedown="startDrag($event, 'istruzione')"
                 @touchstart.passive="startDrag($event, 'istruzione')">
-                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold">Istruzione e Formazione</span>
+                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold" x-text="t('istruzioneFull')"></span>
                 <div class="flex gap-1 p-1">
                     <div class="motif-btn w-6 h-6 md:w-5 md:h-5 bg-motif-light flex items-center justify-center text-black text-xs font-bold cursor-pointer motif-raised" @click.stop="closeWindow('istruzione')">✕</div>
                 </div>
             </div>
             <div class="p-3 md:p-4 bg-motif-light max-h-[60vh] overflow-y-auto text-sm">
-                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1">Istruzione e Formazione</h2>
+                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1" x-text="t('istruzioneFull')"></h2>
                 <template x-for="(edu, index) in cv.education" :key="index">
                     <div class="bg-white motif-sunken p-2 md:p-3 my-2">
                         <div class="font-bold text-motif-titlebarDark">
@@ -600,11 +874,11 @@
                         <div class="text-motif-dark italic text-xs" x-text="formatPeriod(edu.startDate, edu.endDate)"></div>
                         <p class="mt-2"><strong x-text="edu.area"></strong></p>
                         <template x-for="(course, i) in edu.courses" :key="i">
-                            <p class="mt-1 text-xs" :class="course.startsWith('Tesi:') ? 'italic' : ''" x-text="course"></p>
+                            <p class="mt-1 text-xs" :class="(course.startsWith('Tesi:') || course.startsWith('Thesis:')) ? 'italic' : ''" x-text="course"></p>
                         </template>
                     </div>
                 </template>
-                <h3 class="text-motif-titlebarDark font-bold mt-5 mb-2">Lingue</h3>
+                <h3 class="text-motif-titlebarDark font-bold mt-5 mb-2" x-text="t('languagesSection')"></h3>
                 <div class="bg-white motif-sunken p-2">
                     <template x-for="(lang, index) in cv.languages" :key="index">
                         <div>
@@ -626,24 +900,24 @@
             <div class="titlebar flex items-center window-titlebar text-black select-none cursor-move border-b border-[#4a6aa0]"
                 @mousedown="startDrag($event, 'contatti')"
                 @touchstart.passive="startDrag($event, 'contatti')">
-                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold">Informazioni di Contatto</span>
+                <span class="flex-grow px-2 py-1 text-xs md:text-sm font-bold" x-text="t('contattiFull')"></span>
                 <div class="flex gap-1 p-1">
                     <div class="motif-btn w-6 h-6 md:w-5 md:h-5 bg-motif-light flex items-center justify-center text-black text-xs font-bold cursor-pointer motif-raised" @click.stop="closeWindow('contatti')">✕</div>
                 </div>
             </div>
             <div class="p-3 md:p-4 bg-motif-light max-h-[60vh] overflow-y-auto text-sm"
                 x-data="{ formStatus: '', formSubmitting: false }">
-                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1">Contatti</h2>
+                <h2 class="text-motif-titlebarDark text-base md:text-lg font-bold mb-2 border-b-2 border-motif-titlebar pb-1" x-text="t('contatti')"></h2>
                 <div class="bg-white motif-sunken p-2 my-2">
-                    <div class="font-bold text-motif-titlebarDark">📍 Località</div>
+                    <div class="font-bold text-motif-titlebarDark">📍 <span x-text="t('locationLabel')"></span></div>
                     <span x-text="formatLocation(cv.basics.location)"></span>
                 </div>
                 <div class="bg-white motif-sunken p-2 my-2">
-                    <div class="font-bold text-motif-titlebarDark">📧 Email</div>
+                    <div class="font-bold text-motif-titlebarDark">📧 <span x-text="t('emailLabel')"></span></div>
                     <span x-text="cv.basics.email"></span>
                 </div>
                 <div class="mt-4 p-3 bg-white motif-sunken">
-                    <div class="font-bold text-motif-titlebarDark mb-3">✉️ Invia un messaggio</div>
+                    <div class="font-bold text-motif-titlebarDark mb-3">✉️ <span x-text="t('sendMessageTitle')"></span></div>
                     <form :action="'https://formspree.io/f/' + cv.meta.formspreeId" method="POST"
                         @submit.prevent="
                             formSubmitting = true;
@@ -664,50 +938,47 @@
                             .catch(() => { formSubmitting = false; formStatus = 'error'; })
                         ">
                         <div class="mb-2">
-                            <label class="block text-xs font-bold mb-1">Nome *</label>
+                            <label class="block text-xs font-bold mb-1"><span x-text="t('nameField')"></span> *</label>
                             <input type="text" name="name" required
                                 class="w-full p-1 bg-white motif-sunken text-sm focus:outline-none"
-                                placeholder="Il tuo nome">
+                                :placeholder="t('namePlaceholder')">
                         </div>
                         <div class="mb-2">
-                            <label class="block text-xs font-bold mb-1">Email *</label>
+                            <label class="block text-xs font-bold mb-1"><span x-text="t('emailLabel')"></span> *</label>
                             <input type="email" name="email" required
                                 class="w-full p-1 bg-white motif-sunken text-sm focus:outline-none"
-                                placeholder="La tua email">
+                                :placeholder="t('emailPlaceholder')">
                         </div>
                         <div class="mb-2">
-                            <label class="block text-xs font-bold mb-1">Oggetto</label>
+                            <label class="block text-xs font-bold mb-1" x-text="t('subjectField')"></label>
                             <input type="text" name="subject"
                                 class="w-full p-1 bg-white motif-sunken text-sm focus:outline-none"
-                                placeholder="Oggetto del messaggio">
+                                :placeholder="t('subjectPlaceholder')">
                         </div>
                         <div class="mb-3">
-                            <label class="block text-xs font-bold mb-1">Messaggio *</label>
+                            <label class="block text-xs font-bold mb-1"><span x-text="t('messageField')"></span> *</label>
                             <textarea name="message" required rows="4"
                                 class="w-full p-1 bg-white motif-sunken text-sm focus:outline-none resize-none"
-                                placeholder="Scrivi il tuo messaggio..."></textarea>
+                                :placeholder="t('messagePlaceholder')"></textarea>
                         </div>
                         <button type="submit"
                             :disabled="formSubmitting"
                             class="w-full py-2 bg-motif-light motif-raised font-bold text-sm cursor-pointer hover:bg-motif-highlight disabled:opacity-50 disabled:cursor-wait">
-                            <span x-show="!formSubmitting">📤 Invia Messaggio</span>
-                            <span x-show="formSubmitting">⏳ Invio in corso...</span>
+                            <span x-show="!formSubmitting">📤 <span x-text="t('sendBtn')"></span></span>
+                            <span x-show="formSubmitting">⏳ <span x-text="t('sending')"></span></span>
                         </button>
                     </form>
                     <div x-show="formStatus === 'success'" x-transition
                         class="mt-2 p-2 bg-green-100 border border-green-500 text-green-700 text-xs">
-                        ✅ Messaggio inviato con successo! Ti risponderò presto.
+                        ✅ <span x-text="t('successMsg')"></span>
                     </div>
                     <div x-show="formStatus === 'error'" x-transition
                         class="mt-2 p-2 bg-red-100 border border-red-500 text-red-700 text-xs">
-                        ❌ Errore nell'invio. Riprova o contattami via email.
+                        ❌ <span x-text="t('errorMsg')"></span>
                     </div>
                 </div>
                 <div class="mt-4 p-2 bg-white motif-sunken">
-                    <p class="text-xs text-motif-dark">
-                        Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae
-                        in base al D. Lgs. 196/2003 e al Regolamento UE 2016/679
-                    </p>
+                    <p class="text-xs text-motif-dark" x-text="t('privacy')"></p>
                 </div>
             </div>
         </div>
@@ -722,43 +993,53 @@
         :style="{ left: contextMenu.x + 'px', top: contextMenu.y + 'px' }"
         class="fixed z-[100] bg-motif-light motif-raised min-w-[170px] shadow-lg"
         @click.stop>
-        <div class="window-titlebar text-black text-xs font-bold px-2 py-1 border-b border-[#4a6aa0]">
-            Workspace Menu
-        </div>
+        <div class="window-titlebar text-black text-xs font-bold px-2 py-1 border-b border-[#4a6aa0]" x-text="t('workspaceMenu')"></div>
         <div class="p-1">
             <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm flex justify-between items-center"
                 @click="openWindow('profilo'); hideContextMenu()">
-                <span>👤 Profilo</span>
+                <span>👤 <span x-text="t('profilo')"></span></span>
             </div>
             <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm flex justify-between items-center"
                 @click="openWindow('esperienze'); hideContextMenu()">
-                <span>💼 Esperienze</span>
+                <span>💼 <span x-text="t('esperienze')"></span></span>
             </div>
             <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm flex justify-between items-center"
                 @click="openWindow('competenze'); hideContextMenu()">
-                <span>🔧 Competenze</span>
+                <span>🔧 <span x-text="t('competenze')"></span></span>
             </div>
             <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm flex justify-between items-center"
                 @click="openWindow('istruzione'); hideContextMenu()">
-                <span>🎓 Istruzione</span>
+                <span>🎓 <span x-text="t('istruzione')"></span></span>
             </div>
             <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm flex justify-between items-center"
                 @click="openWindow('contatti'); hideContextMenu()">
-                <span>📧 Contatti</span>
+                <span>📧 <span x-text="t('contatti')"></span></span>
             </div>
             <div class="my-1 border-t border-motif-dark"></div>
             <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm"
                 @click="Object.keys(windows).forEach(id => openWindow(id)); hideContextMenu()">
-                📂 Apri Tutte
+                📂 <span x-text="t('openAll')"></span>
             </div>
             <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm"
                 @click="Object.keys(windows).forEach(id => closeWindow(id)); hideContextMenu()">
-                ✖️ Chiudi Tutte
+                ✖️ <span x-text="t('closeAll')"></span>
+            </div>
+            <div class="my-1 border-t border-motif-dark"></div>
+            <div class="px-2 py-1 text-xs text-motif-dark font-bold uppercase" x-text="t('language')"></div>
+            <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center justify-between"
+                @click="setLang('it'); hideContextMenu()">
+                <span>🇮🇹 <span x-text="t('italian')"></span></span>
+                <span x-show="lang === 'it'">✓</span>
+            </div>
+            <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center justify-between"
+                @click="setLang('en'); hideContextMenu()">
+                <span>🇬🇧 <span x-text="t('english')"></span></span>
+                <span x-show="lang === 'en'">✓</span>
             </div>
             <div class="my-1 border-t border-motif-dark"></div>
             <div class="px-3 py-1 hover:bg-motif-titlebar cursor-pointer text-sm"
                 @click="location.reload()">
-                🔄 Aggiorna Desktop
+                🔄 <span x-text="t('refreshDesktop')"></span>
             </div>
         </div>
     </div>
@@ -766,11 +1047,11 @@
     <div class="fixed bottom-0 left-0 right-0 h-20 md:h-14 bg-motif-panel motif-raised z-50 flex items-center px-1 gap-1"
         x-data="{
             windowLabels: {
-                profilo: { icon: '👤', label: 'Profilo' },
-                esperienze: { icon: '💼', label: 'Esperienze' },
-                competenze: { icon: '🔧', label: 'Competenze' },
-                istruzione: { icon: '🎓', label: 'Istruzione' },
-                contatti: { icon: '📧', label: 'Contatti' }
+                profilo: '👤',
+                esperienze: '💼',
+                competenze: '🔧',
+                istruzione: '🎓',
+                contatti: '📧'
             }
         }">
         <div class="hidden md:block relative">
@@ -780,47 +1061,57 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M3 5h18v2H3V5zm0 6h18v2H3v-2zm0 6h18v2H3v-2z"/>
                 </svg>
-                <span>Menu</span>
+                <span x-text="t('menu')"></span>
             </div>
             <div x-show="menuOpen === 'main'"
                 x-transition:enter="transition ease-out duration-100"
                 x-transition:enter-start="opacity-0"
                 x-transition:enter-end="opacity-100"
                 @click.outside="menuOpen = null"
-                class="absolute bottom-full left-0 mb-0.5 bg-motif-light motif-raised min-w-[200px] shadow-lg">
-                <div class="window-titlebar text-black text-xs font-bold px-2 py-1.5 border-b border-[#4a6aa0]">
-                    Portfolio - David Serena
-                </div>
+                class="absolute bottom-full left-0 mb-0.5 bg-motif-light motif-raised min-w-[220px] shadow-lg">
+                <div class="window-titlebar text-black text-xs font-bold px-2 py-1.5 border-b border-[#4a6aa0]" x-text="t('portfolioTitle')"></div>
                 <div class="p-1">
-                    <div class="px-2 py-1 text-xs text-motif-dark font-bold uppercase">Sezioni</div>
+                    <div class="px-2 py-1 text-xs text-motif-dark font-bold uppercase" x-text="t('sections')"></div>
                     <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center gap-2" @click="openWindow('profilo'); menuOpen = null">
-                        <span>👤</span> Profilo
+                        <span>👤</span> <span x-text="t('profilo')"></span>
                     </div>
                     <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center gap-2" @click="openWindow('esperienze'); menuOpen = null">
-                        <span>💼</span> Esperienze
+                        <span>💼</span> <span x-text="t('esperienze')"></span>
                     </div>
                     <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center gap-2" @click="openWindow('competenze'); menuOpen = null">
-                        <span>🔧</span> Competenze
+                        <span>🔧</span> <span x-text="t('competenze')"></span>
                     </div>
                     <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center gap-2" @click="openWindow('istruzione'); menuOpen = null">
-                        <span>🎓</span> Istruzione
+                        <span>🎓</span> <span x-text="t('istruzione')"></span>
                     </div>
                     <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center gap-2" @click="openWindow('contatti'); menuOpen = null">
-                        <span>📧</span> Contatti
+                        <span>📧</span> <span x-text="t('contatti')"></span>
                     </div>
                     <div class="my-1 border-t border-motif-dark"></div>
-                    <div class="px-2 py-1 text-xs text-motif-dark font-bold uppercase">Azioni</div>
+                    <div class="px-2 py-1 text-xs text-motif-dark font-bold uppercase" x-text="t('language')"></div>
+                    <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center justify-between gap-2"
+                        @click="setLang('it'); menuOpen = null">
+                        <span class="flex items-center gap-2">🇮🇹 <span x-text="t('italian')"></span></span>
+                        <span x-show="lang === 'it'">✓</span>
+                    </div>
+                    <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center justify-between gap-2"
+                        @click="setLang('en'); menuOpen = null">
+                        <span class="flex items-center gap-2">🇬🇧 <span x-text="t('english')"></span></span>
+                        <span x-show="lang === 'en'">✓</span>
+                    </div>
+                    <div class="my-1 border-t border-motif-dark"></div>
+                    <div class="px-2 py-1 text-xs text-motif-dark font-bold uppercase" x-text="t('actions')"></div>
                     <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center gap-2" @click="Object.keys(windows).forEach(id => openWindow(id)); menuOpen = null">
-                        <span>📂</span> Apri Tutte
+                        <span>📂</span> <span x-text="t('openAll')"></span>
                     </div>
                     <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center gap-2" @click="Object.keys(windows).forEach(id => closeWindow(id)); menuOpen = null">
-                        <span>✖️</span> Chiudi Tutte
+                        <span>✖️</span> <span x-text="t('closeAll')"></span>
                     </div>
                     <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center gap-2" @click="window.print(); menuOpen = null">
-                        <span>🖨️</span> Stampa CV
+                        <span>🖨️</span> <span x-text="t('printCv')"></span>
                     </div>
                     <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center gap-2" @click="location.reload()">
-                        <span>🔄</span> Aggiorna
+                        <span>🔄</span> <span x-text="t('refresh')"></span>
                     </div>
                 </div>
             </div>
@@ -845,13 +1136,11 @@
                         class="flex-shrink-0 h-8 px-3 flex items-center gap-2 cursor-pointer text-xs font-bold transition-all"
                         :class="activeWindow === id ? 'bg-motif-titlebar text-black motif-sunken' : 'bg-motif-light motif-raised hover:bg-motif-highlight'"
                         @click="toggleWindow(id)">
-                        <span x-text="windowLabels[id]?.icon"></span>
-                        <span x-text="windowLabels[id]?.label" class="max-w-[80px] truncate"></span>
+                        <span x-text="windowLabels[id]"></span>
+                        <span x-text="t(id)" class="max-w-[80px] truncate"></span>
                     </div>
                 </template>
-                <div x-show="!Object.values(windows).some(w => w.open)" class="text-xs text-motif-dark italic px-2 whitespace-nowrap">
-                    Nessuna finestra aperta
-                </div>
+                <div x-show="!Object.values(windows).some(w => w.open)" class="text-xs text-motif-dark italic px-2 whitespace-nowrap" x-text="t('noOpenWindows')"></div>
             </div>
             <div class="icon-btn w-6 h-10 bg-motif-light motif-raised flex items-center justify-center cursor-pointer flex-shrink-0 hover:bg-motif-highlight"
                 @click="scrollTray(1)">
@@ -862,8 +1151,37 @@
         </div>
 
         <div class="hidden md:flex items-center gap-1 p-1 h-12 bg-motif-bg motif-sunken">
+            <div class="relative">
+                <div class="icon-btn h-9 px-2 bg-motif-light motif-raised flex items-center justify-center cursor-pointer hover:bg-motif-highlight gap-1 text-xs font-bold"
+                    :class="menuOpen === 'lang' ? 'motif-sunken' : ''"
+                    :title="t('language')"
+                    @click.stop="menuOpen = menuOpen === 'lang' ? null : 'lang'">
+                    <span x-text="lang === 'it' ? '🇮🇹' : '🇬🇧'"></span>
+                    <span x-text="lang.toUpperCase()"></span>
+                </div>
+                <div x-show="menuOpen === 'lang'"
+                    x-transition:enter="transition ease-out duration-100"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                    @click.outside="menuOpen = null"
+                    class="absolute bottom-full right-0 mb-0.5 bg-motif-light motif-raised min-w-[160px] shadow-lg text-sm">
+                    <div class="window-titlebar text-black text-xs font-bold px-2 py-1 border-b border-[#4a6aa0]" x-text="t('language')"></div>
+                    <div class="p-1">
+                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer flex items-center justify-between"
+                            @click="setLang('it'); menuOpen = null">
+                            <span>🇮🇹 <span x-text="t('italian')"></span></span>
+                            <span x-show="lang === 'it'">✓</span>
+                        </div>
+                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer flex items-center justify-between"
+                            @click="setLang('en'); menuOpen = null">
+                            <span>🇬🇧 <span x-text="t('english')"></span></span>
+                            <span x-show="lang === 'en'">✓</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="icon-btn w-10 h-9 bg-motif-light motif-raised flex items-center justify-center cursor-pointer hover:bg-motif-highlight"
-                title="Stampa CV"
+                :title="t('printCv')"
                 @click="window.print()">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/>
@@ -872,7 +1190,7 @@
             <div class="relative">
                 <div class="icon-btn w-10 h-9 bg-motif-light motif-raised flex items-center justify-center cursor-pointer"
                     :class="menuOpen === 'guida' ? 'motif-sunken' : ''"
-                    title="Guida"
+                    :title="t('guideTitle')"
                     @click.stop="menuOpen = menuOpen === 'guida' ? null : 'guida'">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
@@ -884,20 +1202,18 @@
                     x-transition:enter-end="opacity-100"
                     @click.outside="menuOpen = null"
                     class="absolute bottom-full right-0 mb-0.5 bg-motif-light motif-raised w-[300px] shadow-lg text-sm">
-                    <div class="window-titlebar text-black text-xs font-bold px-2 py-1 border-b border-[#4a6aa0]">
-                        Guida
-                    </div>
+                    <div class="window-titlebar text-black text-xs font-bold px-2 py-1 border-b border-[#4a6aa0]" x-text="t('guideTitle')"></div>
                     <div class="p-3 bg-motif-light max-h-[60vh] overflow-y-auto">
-                        <p class="mb-2 text-xs">Desktop classico in stile anni '90.</p>
+                        <p class="mb-2 text-xs" x-text="t('guideIntro')"></p>
                         <div class="bg-white motif-sunken p-2 mb-2">
                             <ul class="ml-4 list-disc space-y-0.5 text-xs">
-                                <li><strong>Icone:</strong> Clicca per aprire</li>
-                                <li><strong>Finestre:</strong> Trascinabili, chiudi con X</li>
-                                <li><strong>Menu:</strong> Accesso rapido alle sezioni</li>
-                                <li><strong>Barra app:</strong> Gestisci finestre aperte</li>
+                                <li><strong x-text="t('guideIcons')"></strong> <span x-text="t('guideIconsDesc')"></span></li>
+                                <li><strong x-text="t('guideWindows')"></strong> <span x-text="t('guideWindowsDesc')"></span></li>
+                                <li><strong x-text="t('guideMenu')"></strong> <span x-text="t('guideMenuDesc')"></span></li>
+                                <li><strong x-text="t('guideTaskbar')"></strong> <span x-text="t('guideTaskbarDesc')"></span></li>
                             </ul>
                         </div>
-                        <p class="text-xs text-motif-dark">🖨️ <strong>Stampa</strong> per il PDF!</p>
+                        <p class="text-xs text-motif-dark">🖨️ <strong x-text="t('guidePrintHint')"></strong> <span x-text="t('guidePrintTail')"></span></p>
                     </div>
                 </div>
             </div>
@@ -924,18 +1240,28 @@
                     x-transition:enter-start="opacity-0"
                     x-transition:enter-end="opacity-100"
                     @click.outside="menuOpen = null"
-                    class="absolute bottom-full left-0 mb-0.5 bg-motif-light motif-raised min-w-[180px] shadow-lg">
-                    <div class="window-titlebar text-black text-xs font-bold px-2 py-1 border-b border-[#4a6aa0]">
-                        Menu
-                    </div>
+                    class="absolute bottom-full left-0 mb-0.5 bg-motif-light motif-raised min-w-[200px] shadow-lg">
+                    <div class="window-titlebar text-black text-xs font-bold px-2 py-1 border-b border-[#4a6aa0]" x-text="t('menu')"></div>
                     <div class="p-1">
-                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm" @click="openWindow('profilo'); menuOpen = null">👤 Profilo</div>
-                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm" @click="openWindow('esperienze'); menuOpen = null">💼 Esperienze</div>
-                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm" @click="openWindow('competenze'); menuOpen = null">🔧 Competenze</div>
-                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm" @click="openWindow('istruzione'); menuOpen = null">🎓 Istruzione</div>
-                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm" @click="openWindow('contatti'); menuOpen = null">📧 Contatti</div>
+                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm" @click="openWindow('profilo'); menuOpen = null">👤 <span x-text="t('profilo')"></span></div>
+                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm" @click="openWindow('esperienze'); menuOpen = null">💼 <span x-text="t('esperienze')"></span></div>
+                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm" @click="openWindow('competenze'); menuOpen = null">🔧 <span x-text="t('competenze')"></span></div>
+                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm" @click="openWindow('istruzione'); menuOpen = null">🎓 <span x-text="t('istruzione')"></span></div>
+                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm" @click="openWindow('contatti'); menuOpen = null">📧 <span x-text="t('contatti')"></span></div>
                         <div class="my-1 border-t border-motif-dark"></div>
-                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm" @click="window.print(); menuOpen = null">🖨️ Stampa</div>
+                        <div class="px-2 py-1 text-xs text-motif-dark font-bold uppercase" x-text="t('language')"></div>
+                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center justify-between"
+                            @click="setLang('it'); menuOpen = null">
+                            <span>🇮🇹 <span x-text="t('italian')"></span></span>
+                            <span x-show="lang === 'it'">✓</span>
+                        </div>
+                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm flex items-center justify-between"
+                            @click="setLang('en'); menuOpen = null">
+                            <span>🇬🇧 <span x-text="t('english')"></span></span>
+                            <span x-show="lang === 'en'">✓</span>
+                        </div>
+                        <div class="my-1 border-t border-motif-dark"></div>
+                        <div class="px-3 py-1.5 hover:bg-motif-titlebar cursor-pointer text-sm" @click="window.print(); menuOpen = null">🖨️ <span x-text="t('print')"></span></div>
                     </div>
                 </div>
             </div>
@@ -959,8 +1285,8 @@
                             class="flex-shrink-0 w-9 h-8 flex items-center justify-center cursor-pointer text-base"
                             :class="activeWindow === id ? 'bg-motif-titlebar motif-sunken' : 'bg-motif-light motif-raised'"
                             @click="toggleWindow(id)"
-                            :title="windowLabels[id]?.label">
-                            <span x-text="windowLabels[id]?.icon"></span>
+                            :title="t(id)">
+                            <span x-text="windowLabels[id]"></span>
                         </div>
                     </template>
                 </div>
@@ -987,14 +1313,12 @@
                         x-transition:enter-end="opacity-100"
                         @click.outside="menuOpen = null"
                         class="absolute bottom-full right-0 mb-0.5 bg-motif-light motif-raised w-[250px] shadow-lg text-xs">
-                        <div class="window-titlebar text-black text-xs font-bold px-2 py-1 border-b border-[#4a6aa0]">
-                            Guida
-                        </div>
+                        <div class="window-titlebar text-black text-xs font-bold px-2 py-1 border-b border-[#4a6aa0]" x-text="t('guideTitle')"></div>
                         <div class="p-2 bg-motif-light">
                             <ul class="ml-3 list-disc space-y-0.5">
-                                <li><strong>Icone:</strong> Clicca per aprire</li>
-                                <li><strong>Barra:</strong> Gestisci finestre</li>
-                                <li><strong>Menu:</strong> Tutte le sezioni</li>
+                                <li><strong x-text="t('guideIcons')"></strong> <span x-text="t('guideIconsDesc')"></span></li>
+                                <li><strong x-text="t('guideMobileBar')"></strong> <span x-text="t('guideMobileBarDesc')"></span></li>
+                                <li><strong x-text="t('guideMobileMenu')"></strong> <span x-text="t('guideMobileMenuDesc')"></span></li>
                             </ul>
                         </div>
                     </div>
